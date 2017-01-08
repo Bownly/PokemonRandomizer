@@ -1,60 +1,19 @@
-# Pokemon Prism Randomizer
+# Pokemon Randomizers
 
-This script randomizes which pokemon are encountered on which routes. It swaps pokemon by family groupings of the same size. The swaps aren't guaranteed to be reciprocal, but the changes will remain consistent throughout every route. To illustrate: You could end up with a result where Venonat/Venomoth get replaced with Onix/Steelix, and Onix/Steelix gets replaced with Tangela/Tangrowth and Tangela/Tangrowth gets replaced with... well, you get the point. In vanilla Prism, you can catch Venonat in the Acqua Mines and the Health Gym, and Venomoth in Castro Forest and Eagulou Park. Given the same example as before, you would instead encounter Onix in the Acqua mines and the Health Gym, and Steelix in Castro Forest and Eagulou Park. And you'd find Tangela wherever Onix are found in vanilla Prism, etc.
-
-
-# How to use
-
-Note: You have to supply your own copy of the Prism source code for this to work. Put the Prism source folder in the same directory as randomize.py, and then run randomize.py. Afterwards, build the Prism ROM as you normally would.
+Contained in this repository are scripts for randomizing the pokemon distribution for various pokemon games. All of them follow the same general design principles:
+- Pokemon are swapped by families of equal size. Meaning that you could have a build where the Caterpie line is replaced with the Abra line, since both families contain 3 sequential species. You would never end up with a scenario where the Caterpie line is replaced with, say, the Spearow line, since the two families are of sizes 3 and 2 respectively.
+- Swaps are not necessarily reciprocal. Meaning that, using the previous example where the Caterpie line is replaced with the Abra line, it's not likely that the Abra line is replaced with the Caterpie line. It's possible, but unlikely. (In fact, it's possible for any pokemon family to be replaced by itself!)
+- Swaps are global. Again, let's go with the Caterpie -> Abra example. Every place that a Caterpie would normally be catchable, instead, you'd encounter an Abra. Same for Metapod and Kadabra, and Butterfree and Alakazam. These scripts don't edit the teams of other trainers or anything like that. Just wild pokemon and in some cases, starter/gift/fossil/etc pokemon.
 
 
-# Notes/exceptions
-
-- Pokemon families that can't be caught are left unchanged (starters, gifts, fossils, etc)
-- Legendaries are left unchanged
-- Fire families only swap with other fire families, and the same for electric families (this is to prevent a scenario in which you can't catch a fire and/or electric pokemon before that one early cave)
-  - Except Torkoal who is the only fire or electric with a type 1 stage family, and is therefore shuffled with all other 1 stage families
-- Snorunt/Froslass are treated as a 2 stage family, omitting Glalie because I had to omit one and Froslass is rarer
-- Ralts/Kirlia/Gallade are treated as a 3 stage family, omitting Gardevoir because I had to omit one and Gallade is rarer
-- Eevee/Glaceon/Leafeon are treated as a 3 stage family (since you can catch wild Glaceon and Leafeon in vanilla Prism)
-- Slowpoke/Slowking are treated as a 2 stage family, omitting Slowbro because I had to omit one and Slowking is rarer
-- Baby pokemon are omitted, treating their families as one size shorter than normal (ex: Pikachu/Raichu becomes a 2 stage family)
-  - Except the Chingling family is treated as 2 stages since you can catch Chingling in the wild in vanilla Prism
-  - Also except Hitmonchan/Hitmonlee/Hitmontop are treated as 3 separate 1 stage familes, and Tyrogue is omitted
-
-
-# Full list of non-shuffled pokemon
-
-- Chikorita/Bayleef/Meganium
-- Totodile/Croconaw/Feraligatr
-- Cyndaquil/Quilava/Typhlosion
-- Glalie
-- Gardevoir
-- Slowbro
-- Pichu/Tyrogue/Elekid/Magby
-- Togepi/Togetic/Togekiss
-- Cranidos/Rampardos
-- Shieldon/Bastiodon
-- Lileep/Cradily
-- Anorith/Armaldo
-- Bulbasaur/Ivysaur/Venusaur
-- Charmander/Charmeleon/Charizard
-- Squirtle/Wartortle/Blastoise
-- Phancero/Articuno/Zapdos/Moltres
-- Mewtwo/Mew
-- Lugia/Ho-oh
-- Groudon/Kyogre/Rayquaza
-- Varaneous
-- Raiwato
-- Libabeel
+# How to run
+You pretty much just run the script and then build the ROMs as normal. But note that you'll need to provide your own copy of the disassembly of the respective game. (See the respective readme files in each folder for any specifics.)
 
 
 # Possible future features
 
-- Include gift/starter/fossil pokemon
-- Adapt the script for RBGY/GSC/Brown/etc
+- Adapt the script for GSC/Brown/etc
 - Have the code output an ips instead of requiring the users to build their own ROM
-- Add some options
 
 
 

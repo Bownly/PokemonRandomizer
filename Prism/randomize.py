@@ -256,22 +256,29 @@ for pokemon in elec_base_dex:
         end_dex[ogfam[i]] = (newfam[i])
     famlist.remove(newfam)
 
-# this block does the actual data replacement in the rom files
+# this block builds out the list of files that need editing
+files_list = []
+# wild locations
 dir = os.path.join( os.getcwd(), 'source','data','wild')
 for f in os.listdir(dir):
     if f.endswith(".asm"):
+        files_list.append(dir + "/" + f)
 
-        fileObj = codecs.open(dir + "/" + f, "r" )
-        iny = fileObj.read()
-        out = open(dir + "/" + f, 'w')
-
-        for i in end_dex.keys():
-            iny = iny.replace(" "+i+"\n", " "+end_dex[i]+"\n")  # adding the space to prevent false positives like the Marill in Azumarill, and the "\n" is for stuff like Paras and Parasect
-        out.write(iny)
-        fileObj.close()
+# this block does the actual data replacement in the rom files
+for fl in files_list:
+    with open(fl) as f:
+        content = [x.strip('\n') for x in f.readlines()]
+        out_lines = []
+        for line in content:
+            new_line = ''
+            for word in line.split():
+                if word in end_dex:
+                    line = line.replace(word, end_dex[word])
+            out_lines.append(line)
+        out = open(fl, 'w')
+        out_content = "\n".join(out_lines)
+        out.write(out_content)
         out.close()
-
-
 
 
 
