@@ -186,6 +186,7 @@ files_list.append(dir)
 
 # this block does the actual data replacement in the rom files
 for fl in files_list:
+    print fl
     with open(fl) as f:
         content = [x.strip('\n') for x in f.readlines()]
         out_lines = []
@@ -194,10 +195,30 @@ for fl in files_list:
             for word in line.split():
                 if word in end_dex:
                     line = line.replace(word, end_dex[word])
+            for word in line.split(","):
+                if word in end_dex:
+                    line = line.replace(word, end_dex[word])
             out_lines.append(line)
         
         out = open(fl, 'w')
         out_content = "\n".join(out_lines)
         out.write(out_content)
         out.close()
+
+
+
+
+
+# gym leader stuff to consider:
+    # whatever this stuff is:
+        # pokered/blob/master/data/trainer_moves.asm
+    # TM stuff (for all gyms, not just pewter):
+        # pokered/blob/master/scripts/pewtergym
+    # parties list:
+        # master/data/trainer_parties.asm
+
+
+
+
+
 
