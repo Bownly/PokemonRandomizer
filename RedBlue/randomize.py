@@ -383,8 +383,6 @@ gyms = [0, 1, 2, 3, 4, 5, 6]
 shuffle(gyms)
 leaders = [Brock(gyms[0]), Misty(gyms[1]), Surge(gyms[2]), Erika(gyms[3]), Koga(gyms[4]), Sabrina(gyms[5]), Blaine(gyms[6])]
 leaders.sort(key=lambda x: x.ordinal)
-for l in leaders:
-    print l.name, l.ordinal
 
 # rewrites the party data for each leader
 dir = os.path.join(os.getcwd(), 'pokered', 'data')
@@ -403,7 +401,6 @@ city_list = ['/pewtergym.asm', '/ceruleangym.asm', '/vermiliongym.asm',
 dir = os.path.join(os.getcwd(), 'pokered', 'data', 'mapObjects')
 for city in range(len(city_list)-1):
     temp_dir = dir + city_list[city]
-    print 'dir: ', temp_dir
     leader = leaders[city]
     with open(temp_dir) as f:
         content = f.read()
@@ -420,7 +417,6 @@ for leader in leaders:
 dir = os.path.join(os.getcwd(), 'pokered', 'data')
 dir += '/trainer_moves.asm'
 with open(dir) as f:
-    print 'hi'
     content = f.read()
     out = open(dir, 'w')
     out_content = re.sub('(\tdb \d\,.*\n){7}', new_moves, content)
@@ -449,9 +445,6 @@ with open(dir) as f:
     out_content = re.sub( og_ais, new_ais, content)
     out.write(out_content)
     out.close()
-
-
-
 
 
 
