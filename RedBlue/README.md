@@ -26,12 +26,7 @@ Ensure that the folder containing the Red disassembly is named "pokered". Then p
 
 ## Full list of non-shuffled pokemon
 
-- Eevee/Vaporeon/Jolteon/Flareon
-- Jynx
-- Mr. Mime
-- Lapras
-- Porygon
-- Snorlax
+- Vaporeon/Jolteon/Flareon
 - Articuno/Zapdos/Moltres
 - Mewtwo/Mew
 
@@ -121,12 +116,38 @@ Blaine:
 - 42 NINETALES, 40 MAGMAR, 42 RAPIDASH, 47 ARCANINE
 
 
+# Moveset changes
+
+I added a few moves to a handful of pokemon that otherwise wouldn't learn any moves at a low level. I wouldn't want anyone to catch a Rhyhorn on route 1 and be stuck with only Horn Attack until it learns its next move at level 30, for example. Below is the complete list of moveset changes that I made:
+
+- Exeggcute: 20, Psywave
+- Grimer: 15, Sludge; 37, Toxic
+- Rhyhorn: 15, Rock Slide
+- Shellder: 15, Water Gun
+- Tangela: 15, Vine Whip
+- Psyduck: 15, Water Gun
+- Magmar: 15, Rage
+- Electabuzz: 15, Thundershock; 34, Swift
+- Koffing: 24, Sludge
+- Seel: 15, Water Gun
+- Venonat: 15, Confusion
+- Dratini: 15, Water Gun
+- Kabuto: 15, Water Gun
+- Goldeen: 15, Water Gun
+- Aerodactyl: 20, Rock Throw
+- Magnemite: 15, Thundershock
+
+
 # Possible future features
 
-- Include trade/gift/game corner/overworld/etc pokemon
-- Add some options like:
-  - swap starters or not
-  - swap TM locations
-  - swap gym leaders (?)
+- Include old rod pokemon
+- Include bird trio/Mewtwo/(Mew?)
+- Include Giovanni/E4 in the gym leader swap
+- Shuffle misc boss fights like with your Rival and Giovanni in Silph Co.
+- Shuffle trainers' pokemon
+- Shuffle TMs
+- Shuffle route/town locations (I don't even know what I mean by this, but it sounds cool)
+- Include Gen 2+ pokemon
 
+- Add some options and maybe a GUI for them
 

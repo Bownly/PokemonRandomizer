@@ -16,9 +16,15 @@ famlist1 = [
     ["SCYTHER"],
     ["ELECTABUZZ"],
     ["MAGMAR"],
+    ["JYNX"],
+    ["MR_MIME"],
     ["PINSIR"],
     ["TAUROS"],
+    ["EEVEE"],
     ["DITTO"],
+    ["LAPRAS"],
+    ["PORYGON"],
+    ["SNORLAX"],
     ["AERODACTYL"]
 ]
 famlist2 = [
@@ -140,15 +146,141 @@ base_dex = {
     "SCYTHER"     : ["SCYTHER"],
     "ELECTABUZZ"  : ["ELECTABUZZ"],
     "MAGMAR"      : ["MAGMAR"],
+    "JYNX"        : ["JYNX"],
+    "MR_MIME"     : ["MR_MIME"],
     "PINSIR"      : ["PINSIR"],
     "TAUROS"      : ["TAUROS"],
     "MAGIKARP"    : ["MAGIKARP", "GYARADOS"],
+    "EEVEE"       : ["EEVEE"],
     "DITTO"       : ["DITTO"],
+    "LAPRAS"      : ["LAPRAS"],
+    "PORYGON"     : ["PORYGON"],
+    "SNORLAX"     : ["SNORLAX"],
     "OMANYTE"     : ["OMANYTE", "OMASTAR"],
     "KABUTO"      : ["KABUTO", "KABUTOPS"],
     "AERODACTYL"  : ["AERODACTYL"],
     "DRATINI"     : ["DRATINI", "DRAGONAIR", "DRAGONITE"]
 }
+
+new_moves_dex = {
+    "EXEGGCUTE"   : '''    db 20,PSYWAVE
+    db 25,REFLECT
+    db 28,LEECH_SEED
+    db 32,STUN_SPORE
+    db 37,POISONPOWDER
+    db 42,SOLARBEAM
+    db 48,SLEEP_POWDER
+    db 0''',
+    "GRIMER"      : '''    db 15,SLUDGE
+    db 30,POISON_GAS
+    db 33,MINIMIZE
+    db 37,TOXIC
+    db 42,HARDEN
+    db 48,SCREECH
+    db 55,ACID_ARMOR
+    db 0''',
+    "RHYHORN"     :'''    db 15,ROCK_SLIDE
+    db 30,STOMP
+    db 35,TAIL_WHIP
+    db 40,FURY_ATTACK
+    db 45,HORN_DRILL
+    db 50,LEER
+    db 55,TAKE_DOWN
+    db 0''',
+    "SHELLDER"   :'''    db 15,WATER_GUN
+    db 18,SUPERSONIC
+    db 23,CLAMP
+    db 30,AURORA_BEAM
+    db 39,LEER
+    db 50,ICE_BEAM
+    db 0''',
+    "TANGELA"     :'''    db 15,VINE_WHIP
+    db 29,ABSORB
+    db 32,POISONPOWDER
+    db 36,STUN_SPORE
+    db 39,SLEEP_POWDER
+    db 45,SLAM
+    db 49,GROWTH
+    db 0''',
+    "PSYDUCK"     :'''    db 15,WATER_GUN
+    db 28,TAIL_WHIP
+    db 31,DISABLE
+    db 36,CONFUSION
+    db 43,FURY_SWIPES
+    db 52,HYDRO_PUMP
+    db 0''',
+    "MAGMAR"      :'''    db 15,RAGE
+    db 36,LEER
+    db 39,CONFUSE_RAY
+    db 43,FIRE_PUNCH
+    db 48,SMOKESCREEN
+    db 52,SMOG
+    db 55,FLAMETHROWER
+    db 0''',
+    "ELECTABUZZ"  :'''    db 15,THUNDERSHOCK
+    db 34,SWIFT
+    db 37,SCREECH
+    db 42,THUNDERPUNCH
+    db 49,LIGHT_SCREEN
+    db 54,THUNDER
+    db 0''',
+    "KOFFING"     :'''    db 24,SLUDGE
+    db 37,SMOKESCREEN
+    db 40,SELFDESTRUCT
+    db 45,HAZE
+    db 48,EXPLOSION
+    db 0''',
+    "SEEL"        :'''    db 15,WATER_GUN
+    db 30,GROWL
+    db 35,AURORA_BEAM
+    db 40,REST
+    db 45,TAKE_DOWN
+    db 50,ICE_BEAM
+    db 0''',
+    "VENONAT"     :'''    db 15,CONFUSION
+    db 24,POISONPOWDER
+    db 27,LEECH_LIFE
+    db 30,STUN_SPORE
+    db 35,PSYBEAM
+    db 38,SLEEP_POWDER
+    db 43,PSYCHIC_M
+    db 0''',
+    "DRATINI"     :'''    db 10,THUNDER_WAVE
+    db 15,WATER_GUN
+    db 20,AGILITY
+    db 30,SLAM
+    db 40,DRAGON_RAGE
+    db 50,HYPER_BEAM
+    db 0''',
+    "KABUTO"      :'''    db 15,WATER_GUN
+    db 34,ABSORB
+    db 39,SLASH
+    db 44,LEER
+    db 49,HYDRO_PUMP
+    db 0''',
+    "GOLDEEN"     :'''    db 15,WATER_GUN
+    db 19,SUPERSONIC
+    db 24,HORN_ATTACK
+    db 30,FURY_ATTACK
+    db 37,WATERFALL
+    db 45,HORN_DRILL
+    db 54,AGILITY
+    db 0''',
+    "AERODACTYL"  :'''    db 20,ROCK_THROW
+    db 33,SUPERSONIC
+    db 38,BITE
+    db 45,TAKE_DOWN
+    db 54,HYPER_BEAM
+    db 0''',
+    "MAGNEMITE"   :'''    db 15,THUNDERSHOCK
+    db 21,SONICBOOM
+    db 29,SUPERSONIC
+    db 35,THUNDER_WAVE
+    db 41,SWIFT
+    db 47,SCREECH
+    db 0'''
+}
+
 
 end_dex = {}
 
@@ -176,6 +308,25 @@ dir = os.path.join(os.getcwd(), 'pokered', 'data', 'wildPokemon')
 for f in os.listdir(dir):
     if f.endswith('.asm'):
         files_list.append(dir + "/" + f)
+# good rod fish
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/good_rod.asm'
+files_list.append(dir)
+# super rod fish
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/super_rod.asm'
+files_list.append(dir)
+# casino prize pokemon
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/prizes.asm'
+files_list.append(dir)
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/prize_mon_levels.asm'
+files_list.append(dir)
+# trade pokemon
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/trades.asm'
+files_list.append(dir)
 # starters
 dir = os.path.join(os.getcwd(), 'pokered', 'constants')
 dir += '/starter_mons.asm'
@@ -183,6 +334,34 @@ files_list.append(dir)
 # fossils
 dir = os.path.join(os.getcwd(), 'pokered', 'engine', 'overworld')
 dir += '/cinnabar_lab.asm'
+files_list.append(dir)
+# gift pokemon
+dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Eevee
+dir += '/celadonmansion5.asm'
+files_list.append(dir)
+dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Hitmonlee / Hitmonchan
+dir += '/fightingdojo.asm'
+files_list.append(dir)
+dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Snorlax
+dir += '/route12.asm'
+files_list.append(dir)
+dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Lapras
+dir += '/silphco7.asm'
+files_list.append(dir)
+# overworld pokemon
+dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Snorlax
+dir += '/route16.asm'
+files_list.append(dir)
+dir = os.path.join(os.getcwd(), 'pokered', 'data', 'mapObjects')  # powerplant Voltorbs / Electrodes
+dir += '/powerplant.asm'
+files_list.append(dir)
+# title screen pokemon
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/title_mons.asm'
+files_list.append(dir)
+# credits screen pokemon
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/credit_mons.asm'
 files_list.append(dir)
 
 # this block does the actual data replacement in the rom files
@@ -199,17 +378,26 @@ for fl in files_list:
                 if word in end_dex:
                     line = line.replace(word, end_dex[word])
             out_lines.append(line)
-        
         out = open(fl, 'w')
         out_content = "\n".join(out_lines)
         out.write(out_content)
         out.close()
 
-
-
+# this block edits the movesets of certain pokemon
+dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir += '/evos_moves.asm'
+with open(dir) as f:
+    content = f.read()
+    out = open(dir, 'w')
+    out_content = content
+    for pogey in new_moves_dex:
+        srx = re.search(';' + pogey + '\n(.*\n)*?;Learnset\n((\s*.*\n)*?\s*db 0)', out_content)
+        out_content = re.sub( srx.group(2), new_moves_dex[pogey], out_content)
+        print 'srx: \n' + srx.group(2) + '\n' + new_moves_dex[pogey] + '\n==========================\n'
+    out.write(out_content)
+    out.close()
 
 # gym leader shuffle starts here
-
 class Brock(object):
     def __init__ (self, ordinal):
         self.name = "Brock"
@@ -397,9 +585,9 @@ for leader in leaders:
 
 # swaps out the map sprites and encounter data for each gym
 city_list = ['/pewtergym.asm', '/ceruleangym.asm', '/vermiliongym.asm', 
-             '/celadongym.asm', '/fuchsiagym.asm', '/saffrongym.asm', '/cinnibargym.asm']
+             '/celadongym.asm', '/fuchsiagym.asm', '/saffrongym.asm', '/cinnabargym.asm']
 dir = os.path.join(os.getcwd(), 'pokered', 'data', 'mapObjects')
-for city in range(len(city_list)-1):
+for city in range(len(city_list)):
     temp_dir = dir + city_list[city]
     leader = leaders[city]
     with open(temp_dir) as f:
@@ -423,22 +611,18 @@ with open(dir) as f:
     out.write(out_content)
     out.close()
 
-
 # swaps around the ai
 dir = os.path.join(os.getcwd(), 'pokered', 'engine', 'battle')
 dir += '/trainer_ai.asm'
-
 new_ais = ''  # gotta build out the new_ais string
 for leader in leaders:
     new_ais += (leader.ai_line + '\n')
-
 og_ais = ''
 with open(dir) as f:  # gotta build out the og_ais string
     content = f.read()
     srx = re.search('db.*BRUNO.*\n(.*\n)(.*\n)(.*\n)(.*\n)(.*\n)(.*\n)(.*\n)', content)
     for g in srx.groups():
         og_ais += g
-
 with open(dir) as f:
     content = f.read()
     out = open(dir, 'w')
@@ -448,15 +632,17 @@ with open(dir) as f:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# # gym leader stuff to consider:
+#     # text stuff:
+#         # pokered/scripts/pewtergym.asm
+#             # 'Gym1LeaderName:\n\tdb "BROCK@"'
+#         # in the same vein, probably pokered/scripts/pewtercity.asm for the sign outside the gym
+#     # TM stuff (for all gyms, not just pewter):
+#         # pokered/scripts/pewtergym
+#         # etc
+#     # dialog:
+#         # pokered/text/maps/pewter_gym_1.asm
+#         # pokered/text/maps/pewter_gym_2.asm
+#         # pokered/text/maps/cerulean_gym.asm
+#         # etc
 
