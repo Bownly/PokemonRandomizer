@@ -53,67 +53,67 @@ Things that are not shuffled by the script:
 I had to make up pretty much all of these teams. They should all be roughly equal in terms of balance. Format is {level} {pokemon}. 
 
 Brock:
-- 12 GEODUDE, 14 ONIX
-- 18 GRAVELER, 21 ONIX
-- 21 GRAVELER, 18 AERODACTYL, 24 ONIX
-- 29 GOLEM, 24 AERODACTYL, 29 ONIX
-- 37 OMANYTE, 39 GOLEM, 37 AERODACTYL, 43 ONIX
-- 38 OMASTAR, 37 GOLEM, 38 AERODACTYL, 43 ONIX
-- 42 OMASTAR, 40 GOLEM, 42 AERODACTYL, 47 ONIX
+- 12 Geodude, 14 Onix
+- 18 Graveler, 21 Onix
+- 21 Graveler, 18 Aerodactyl, 24 Onix
+- 29 Golem, 24 Aerodactyl, 29 Onix
+- 37 Omanyte, 39 Golem, 37 Aerodactyl, 43 Onix
+- 38 Omastar, 37 Golem, 38 Aerodactyl, 43 Onix
+- 42 Omastar, 40 Golem, 42 Aerodactyl, 47 Onix
 
 Misty:
-- 12 PSYDUCK, 14 STARYU
-- 18 PSYDUCK, 21 STARMIE
-- 21 PSYDUCK, 18 LAPRAS, 24 STARMIE
-- 29 GOLDUCK, 24 LAPRAS, 29 STARMIE
-- 37 TENTACOOL, 39 GOLDUCK, 37 LAPRAS, 43 STARMIE
-- 38 TENTACRUEL, 37 GOLDUCK, 38 LAPRAS, 43 STARMIE
-- 42 TENTACRUEL, 40 GOLDUCK, 42 LAPRAS, 47 STARMIE
+- 12 Psyduck, 14 Staryu
+- 18 Psyduck, 21 Starmie
+- 21 Psyduck, 18 Lapras, 24 Starmie
+- 29 Golduck, 24 Lapras, 29 Starmie
+- 37 Tentacool, 39 Golduck, 37 Lapras, 43 Starmie
+- 38 Tentacruel, 37 Golduck, 38 Lapras, 43 Starmie
+- 42 Tentacruel, 40 Golduck, 42 Lapras, 47 Starmie
 
 Lt. Surge:
-- 12 VOLTORB, 14 PIKACHU
-- 18 VOLTORB, 21 RAICHU
-- 21 VOLTORB, 18 ELECTABUZZ, 24 RAICHU
-- 29 ELECTRODE, 24 ELECTABUZZ, 29 RAICHU
-- 37 MAGNEMITE, 39 ELECTRODE, 37 ELECTABUZZ, 43 RAICHU
-- 38 MAGNETON, 37 ELECTRODE, 38 ELECTABUZZ, 43 RAICHU
-- 42 MAGNETON, 40 ELECTRODE, 42 ELECTABUZZ, 47 RAICHU
+- 12 Voltorb, 14 Pikachu
+- 18 Voltorb, 21 Raichu
+- 21 Voltorb, 18 Electabuzz, 24 Raichu
+- 29 Electrode, 24 Electabuzz, 29 Raichu
+- 37 Magnemite, 39 Electrode, 37 Electabuzz, 43 Raichu
+- 38 Magneton, 37 Electrode, 38 Electabuzz, 43 Raichu
+- 42 Magneton, 40 Electrode, 42 Electabuzz, 47 Raichu
 
 Erika:
-- 12 BELLSPROUT, 14 ODDISH
-- 18 WEEPINBELL, 21 GLOOM
-- 21 WEEPINBELL, 18 TANGELA, 24 VILEPLUME
-- 29 VICTREEBEL, 24 TANGELA, 29 VILEPLUME
-- 37 EXEGGCUTE, 39 VICTREEBEL, 37 TANGELA, 43 VILEPLUME
-- 38 EXEGGUTOR, 37 VICTREEBEL, 38 TANGELA, 43 VILEPLUME
-- 42 EXEGGUTOR, 40 VICTREEBEL, 42 TANGELA, 47 VILEPLUME
+- 12 Bellsprout, 14 Oddish
+- 18 Weepinbell, 21 Gloom
+- 21 Weepinbell, 18 Tangela, 24 Vileplume
+- 29 Victreebel, 24 Tangela, 29 Vileplume
+- 37 Exeggcute, 39 Victreebel, 37 Tangela, 43 Vileplume
+- 38 Exeggutor, 37 Victreebel, 38 Tangela, 43 Vileplume
+- 42 Exeggutor, 40 Victreebel, 42 Tangela, 47 Vileplume
 
 Koga:
-- 12 GRIMER, 14 KOFFING
-- 18 GRIMER, 21 WEEZING
-- 21 GRIMER, 18 GOLBAT, 24 WEEZING
-- 29 MUK, 24 GOLBAT, 29 WEEZING
-- 37 NIDORINO, 39 MUK, 37 GOLBAT, 43 WEEZING
-- 38 NIDOKING, 37 MUK, 38 GOLBAT, 43 WEEZING
-- 42 NIDOKING, 40 MUK, 42 GOLBAT, 47 WEEZING
+- 12 Grimer, 14 Koffing
+- 18 Grimer, 21 Weezing
+- 21 Grimer, 18 Golbat, 24 Weezing
+- 29 Muk, 24 Golbat, 29 Weezing
+- 37 Nidorino, 39 Muk, 37 Golbat, 43 Weezing
+- 38 Nidoking, 37 Muk, 38 Golbat, 43 Weezing
+- 42 Nidoking, 40 Muk, 42 Golbat, 47 Weezing
 
 Sabrina:
-- 12 VENONAT, 14 KADABRA
-- 18 VENONAT, 21 KADABRA
-- 21 VENONAT, 18 MR_MIME, 24 KADABRA
-- 29 VENOMOTH, 24 MR_MIME, 29 ALAKAZAM
-- 37 SLOWPOKE, 39 MR_MIME, 37 VENOMOTH, 43 ALAKAZAM
-- 38 SLOWBRO, 37 MR_MIME, 38 VENOMOTH, 43 ALAKAZAM
-- 42 SLOWBRO, 40 MR_MIME, 42 VENOMOTH, 47 ALAKAZAM
+- 12 Venonat, 14 Kadabra
+- 18 Venonat, 21 Kadabra
+- 21 Venonat, 18 Mr. Mime, 24 Kadabra
+- 29 Venomoth, 24 Mr. Mime, 29 Alakazam
+- 37 Slowpoke, 39 Mr. Mime, 37 Venomoth, 43 Alakazam
+- 38 Slowbro, 37 Mr. Mime, 38 Venomoth, 43 Alakazam
+- 42 Slowbro, 40 Mr. Mime, 42 Venomoth, 47 Alakazam
 
 Blaine:
-- 12 PONYTA, 14 GROWLITHE
-- 18 PONYTA, 21 ARCANINE
-- 21 PONYTA, 18 MAGMAR, 24 ARCANINE
-- 29 RAPIDASH, 24 MAGMAR, 29 ARCANINE
-- 37 VULPIX, 39 RAPIDASH, 37 MAGMAR, 43 ARCANINE
-- 38 NINETALES, 37 RAPIDASH, 38 MAGMAR, 43 ARCANINE
-- 42 NINETALES, 40 MAGMAR, 42 RAPIDASH, 47 ARCANINE
+- 12 Ponyta, 14 Growlithe
+- 18 Ponyta, 21 Arcanine
+- 21 Ponyta, 18 Magmar, 24 Arcanine
+- 29 Rapidash, 24 Magmar, 29 Arcanine
+- 37 Vulpix, 39 Rapidash, 37 Magmar, 43 Arcanine
+- 38 Ninetales, 37 Rapidash, 38 Magmar, 43 Arcanine
+- 42 Ninetales, 40 Magmar, 42 Rapidash, 47 Arcanine
 
 
 # Moveset changes
@@ -148,6 +148,5 @@ I added a few moves to a handful of pokemon that otherwise wouldn't learn any mo
 - Shuffle TMs
 - Shuffle route/town locations (I don't even know what I mean by this, but it sounds cool)
 - Include Gen 2+ pokemon
-
 - Add some options and maybe a GUI for them
 
