@@ -140,7 +140,6 @@ I added a few moves to a handful of pokemon that otherwise wouldn't learn any mo
 
 # Possible future features
 
-- Include old rod pokemon
 - Include bird trio/Mewtwo/(Mew?)
 - Include Giovanni/E4 in the gym leader swap
 - Shuffle misc boss fights like with your Rival and Giovanni in Silph Co.

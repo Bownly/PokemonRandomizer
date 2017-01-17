@@ -75,7 +75,7 @@ famlist3 = [
     ["PIDGEY", "PIDGEOTTO", "PIDGEOT"],
     ["NIDORAN_F", "NIDORINA", "NIDOQUEEN"],
     ["NIDORAN_M", "NIDORINO", "NIDOKING"],
-    ["ODDISH", "GLOOM", "VILEPLOOM"],
+    ["ODDISH", "GLOOM", "VILEPLUME"],
     ["POLIWAG", "POLIWHIRL", "POLIWRATH"],
     ["ABRA", "KADABRA", "ALAKAZAM"],
     ["MACHOP", "MACHOKE", "MACHAMP"],
@@ -103,7 +103,7 @@ base_dex = {
     "VULPIX"      : ["VULPIX", "NINETALES"],
     "JIGGLYPUFF"  : ["JIGGLYPUFF", "WIGGLYTUFF"],
     "ZUBAT"       : ["ZUBAT", "GOLBAT"],
-    "ODDISH"      : ["ODDISH", "GLOOM", "VILEPLOOM"],
+    "ODDISH"      : ["ODDISH", "GLOOM", "VILEPLUME"],
     "PARAS"       : ["PARAS", "PARASECT"],
     "VENONAT"     : ["VENONAT", "VENOMOTH"],
     "DIGLETT"     : ["DIGLETT", "DUGTRIO"],
@@ -308,33 +308,42 @@ dir = os.path.join(os.getcwd(), 'pokered', 'data', 'wildPokemon')
 for f in os.listdir(dir):
     if f.endswith('.asm'):
         files_list.append(dir + "/" + f)
-# good rod fish
-dir = os.path.join(os.getcwd(), 'pokered', 'data')
+
+dir = os.path.join(os.getcwd(), 'pokered', 'engine', 'items')  # old rod encounters and the ghost Marowak
+dir += '/items.asm'
+files_list.append(dir)
+
+dir = os.path.join(os.getcwd(), 'pokered', 'data')  # good rod encounters
 dir += '/good_rod.asm'
 files_list.append(dir)
-# super rod fish
-dir = os.path.join(os.getcwd(), 'pokered', 'data')
+
+dir = os.path.join(os.getcwd(), 'pokered', 'data')  # super rod encounters
 dir += '/super_rod.asm'
 files_list.append(dir)
-# casino prize pokemon
-dir = os.path.join(os.getcwd(), 'pokered', 'data')
+
+dir = os.path.join(os.getcwd(), 'pokered', 'data')  # casino prize pokemon
 dir += '/prizes.asm'
 files_list.append(dir)
 dir = os.path.join(os.getcwd(), 'pokered', 'data')
 dir += '/prize_mon_levels.asm'
 files_list.append(dir)
-# trade pokemon
-dir = os.path.join(os.getcwd(), 'pokered', 'data')
+
+dir = os.path.join(os.getcwd(), 'pokered', 'data')  # trade pokemon
 dir += '/trades.asm'
 files_list.append(dir)
-# starters
-dir = os.path.join(os.getcwd(), 'pokered', 'constants')
+
+dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Magikarp salesman
+dir += '/mtmoonpokecenter.asm'
+files_list.append(dir)
+
+dir = os.path.join(os.getcwd(), 'pokered', 'constants')  # starters
 dir += '/starter_mons.asm'
 files_list.append(dir)
-# fossils
-dir = os.path.join(os.getcwd(), 'pokered', 'engine', 'overworld')
+
+dir = os.path.join(os.getcwd(), 'pokered', 'engine', 'overworld') # fossils
 dir += '/cinnabar_lab.asm'
 files_list.append(dir)
+
 # gift pokemon
 dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Eevee
 dir += '/celadonmansion5.asm'
@@ -348,6 +357,7 @@ files_list.append(dir)
 dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Lapras
 dir += '/silphco7.asm'
 files_list.append(dir)
+
 # overworld pokemon
 dir = os.path.join(os.getcwd(), 'pokered', 'scripts')  # Snorlax
 dir += '/route16.asm'
@@ -355,16 +365,16 @@ files_list.append(dir)
 dir = os.path.join(os.getcwd(), 'pokered', 'data', 'mapObjects')  # powerplant Voltorbs / Electrodes
 dir += '/powerplant.asm'
 files_list.append(dir)
-# title screen pokemon
-dir = os.path.join(os.getcwd(), 'pokered', 'data')
+
+# A E S T H E T I C S
+dir = os.path.join(os.getcwd(), 'pokered', 'data')  # title screen pokemon
 dir += '/title_mons.asm'
 files_list.append(dir)
-# credits screen pokemon
-dir = os.path.join(os.getcwd(), 'pokered', 'data')
+dir = os.path.join(os.getcwd(), 'pokered', 'data')  # credits screen pokemon
 dir += '/credit_mons.asm'
 files_list.append(dir)
 
-# this block does the actual data replacement in the rom files
+# this block does the actual data replacement in the asm files
 for fl in files_list:
     with open(fl) as f:
         content = [x.strip('\n') for x in f.readlines()]
@@ -393,7 +403,6 @@ with open(dir) as f:
     for pogey in new_moves_dex:
         srx = re.search(';' + pogey + '\n(.*\n)*?;Learnset\n((\s*.*\n)*?\s*db 0)', out_content)
         out_content = re.sub( srx.group(2), new_moves_dex[pogey], out_content)
-        print 'srx: \n' + srx.group(2) + '\n' + new_moves_dex[pogey] + '\n==========================\n'
     out.write(out_content)
     out.close()
 
